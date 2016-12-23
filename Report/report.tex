@@ -1,0 +1,55 @@
+\documentclass[12pt,a4paper]{report}
+
+\usepackage{cmap}
+\usepackage[T2A]{fontenc}
+\usepackage[utf8]{inputenc}
+\usepackage[russian]{babel}
+\usepackage{amsmath}
+\usepackage{amsfonts}
+\usepackage{amssymb}
+\usepackage{graphicx}
+\usepackage{listings}
+\usepackage{float}
+\usepackage{longtable}
+\graphicspath{{images/}}
+
+\lstset{
+	inputencoding=utf8x,
+	extendedchars=\true,
+	frame=single,
+	breaklines=true,
+	numbers=left,
+	keepspaces = true}
+
+\voffset -24.5mm
+\hoffset -5mm
+\textwidth 173mm
+\textheight 240mm
+\oddsidemargin=0mm \evensidemargin=0mm
+
+\begin{document}
+	\input{titlepage.tex}
+	
+	\renewcommand{\thesection}{\arabic{section}}
+	\tableofcontents
+	\pagebreak
+	
+	\setcounter{totalnumber}{10}
+	\setcounter{topnumber}{10}
+	\setcounter{bottomnumber}{10}
+	\renewcommand{\topfraction}{1}
+	\renewcommand{\textfraction}{0}
+	
+	\input{Introduction.tex}
+	\section{Анализ задания}
+	\input{Task.tex}
+	\input{UseCase.tex}
+	\input{Sequence.tex}
+	\section{Реализация}
+	\input{Data.tex}
+	\input{Interface.tex}
+	\input{Testing.tex}
+	\input{AdminGuide.tex}
+	\input{UserGuide.tex}
+	\input{Conclusion.tex}
+\end{document}
